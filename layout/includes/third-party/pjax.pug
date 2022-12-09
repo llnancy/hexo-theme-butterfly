@@ -25,6 +25,7 @@ script.
   })
 
   document.addEventListener('pjax:send', function () {
+    NProgress.start();
 
     // removeEventListener
     btf.removeGlobalFnEvent('pjax')
@@ -74,9 +75,12 @@ script.
 
     // prismjs
     typeof Prism === 'object' && Prism.highlightAll()
+
+    NProgress.done();
   })
 
   document.addEventListener('pjax:error', e => {
+    NProgress.done();
     if (e.request.status === 404) {
       pjax.loadUrl('!{url_for("/404.html")}')
     }

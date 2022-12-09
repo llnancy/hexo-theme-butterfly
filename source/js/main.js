@@ -1,4 +1,9 @@
+window.addEventListener('load', function (event) {
+  NProgress.done()
+});
+
 document.addEventListener('DOMContentLoaded', function () {
+  NProgress.start()
   let headerContentWidth, $nav
   let mobileSidebarOpen = false
 

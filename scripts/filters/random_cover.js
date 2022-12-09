@@ -20,7 +20,7 @@ hexo.extend.filter.register('before_post_render', data => {
     if (!defaultCover) return false
     if (!Array.isArray(defaultCover)) return defaultCover
     const num = Math.floor(Math.random() * defaultCover.length)
-    return defaultCover[num]
+    return defaultCover[num]  + '&llnancy=' + Math.random()
   }
 
   if (coverVal === false) return data

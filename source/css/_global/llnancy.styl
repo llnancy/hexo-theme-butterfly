@@ -1,0 +1,48 @@
+// =======================导航栏设置透明色开始=======================
+#page-header
+  &.not-top-img
+    #nav
+      background: transparent !important
+      box-shadow: none !important
+      a
+        color: #ffffff !important
+      .child
+        color: var(--font-color) !important
+
+#page-header
+  &.nav-visible
+    #nav
+      background: rgba(255, 255, 255, .8) !important
+      a
+        color: var(--font-color) !important
+
+if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
+  [data-theme='dark']
+    #page-header
+      &.not-top-img > #nav
+        background: transparent !important
+        box-shadow: none !important
+      &.nav-visible > #nav
+        background: alpha(#121212, .8) !important
+// =======================导航栏设置透明色结束=======================
+
+// =======================浏览器滚动条美化开始=======================
+*::-webkit-scrollbar
+  width: 5px
+*::-webkit-scrollbar-thumb
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent)
+  border-radius: 1.4em
+
+*::-webkit-scrollbar-corner
+  background-color: transparent
+// =======================浏览器滚动条美化结束=======================
+
+// =====================NProgress进度条相关开始=====================
+#nprogress
+  .bar
+    height: 0.2em !important
+    background: #8b42ff !important
+  .spinner-icon
+    border-top-color: #ffffff !important;
+    border-left-color: #ffffff !important;
+// =====================NProgress进度条相关结束=====================
