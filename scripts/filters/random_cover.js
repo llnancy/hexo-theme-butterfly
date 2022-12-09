@@ -22,7 +22,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
     if (!(theme.cover && theme.cover.default_cover)) return false
     if (!Array.isArray(theme.cover.default_cover)) return theme.cover.default_cover
     const num = Math.floor(Math.random() * theme.cover.default_cover.length)
-    return theme.cover.default_cover[num]
+    return theme.cover.default_cover[num] + '&llnancy=' + Math.random()
   }
 
   if (coverVal === false) return data
