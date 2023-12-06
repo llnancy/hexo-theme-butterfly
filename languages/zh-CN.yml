@@ -8,7 +8,7 @@ copy:
   noSupport: 浏览器不支持
 
 page:
-  articles: 文章总览
+  articles: 资源总览
   tag: 标签
   category: 分类
   archives: 归档
@@ -43,9 +43,9 @@ search:
     hits_stats: '找到 ${hits} 条结果，用时 ${time} 毫秒'
 
   local_search:
-    input_placeholder: 搜索文章
+    input_placeholder: 搜索资源
     hits_empty: '找不到您查询的内容：${query}'
-    hits_stats: '共找到 ${hits} 篇文章'
+    hits_stats: '共找到 ${hits} 个资源'
 
 pagination:
   prev: 上一篇
@@ -61,10 +61,10 @@ aside:
   card_categories: 分类
   card_tags: 标签
   card_archives: 归档
-  card_recent_post: 最新文章
+  card_recent_post: 最新资源
   card_webinfo:
     headline: 网站资讯
-    article_name: 文章数目
+    article_name: 资源数目
     runtime:
       name: 已运行时间
       unit: 天
