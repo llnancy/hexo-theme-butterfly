@@ -574,7 +574,10 @@ module.exports = {
     enable: true,
     option: null
   },
-  structured_data: false,
+  structured_data: {
+    enable: false,
+    alternate_name: null
+  },
   css_prefix: true,
   inject: {
     head: null,
