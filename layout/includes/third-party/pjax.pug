@@ -39,7 +39,6 @@ script.
     }
 
     document.addEventListener('pjax:send', () => {
-      NProgress.start();
       // removeEventListener
       btf.removeGlobalFnEvent('pjaxSendOnce')
       btf.removeGlobalFnEvent('themeChange')
@@ -62,11 +61,9 @@ script.
       })
 
       triggerPjaxFn(window.globalFn.pjaxComplete)
-      NProgress.done();
     })
 
     document.addEventListener('pjax:error', e => {
-      NProgress.done();
       if (e.request.status === 404) {
         const usePjax = !{theme.pjax && theme.pjax.enable}
         !{theme.error_404 && theme.error_404.enable}
