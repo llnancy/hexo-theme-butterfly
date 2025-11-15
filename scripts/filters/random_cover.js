@@ -9,12 +9,12 @@ hexo.extend.generator.register('post', locals => {
 
   const getRandomCover = defaultCover => {
     if (!defaultCover) return false
-    if (!Array.isArray(defaultCover)) return defaultCover + '&llnancy=' + Math.random()
+    if (!Array.isArray(defaultCover)) return defaultCover
 
     const coverCount = defaultCover.length
 
     if (coverCount === 1) {
-      return defaultCover[0]
+      return defaultCover[0] + '&llnancy=' + Math.random()
     }
 
     const maxPreviousIndexes = coverCount === 2 ? 1 : (coverCount === 3 ? 2 : 3)
