@@ -9,7 +9,7 @@ hexo.extend.generator.register('post', locals => {
 
   const getRandomCover = defaultCover => {
     if (!defaultCover) return false
-    if (!Array.isArray(defaultCover)) return defaultCover
+    if (!Array.isArray(defaultCover)) return defaultCover + '&llnancy=' + Math.random()
 
     const coverCount = defaultCover.length
 
@@ -29,7 +29,7 @@ hexo.extend.generator.register('post', locals => {
       previousIndexes.shift()
     }
 
-    return defaultCover[index] + '&llnancy=' + Math.random()
+    return defaultCover[index]
   }
 
   const handleImg = data => {
